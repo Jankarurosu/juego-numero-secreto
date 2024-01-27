@@ -25,6 +25,6 @@ Si deseas ajustar el juego según tus preferencias, aquí tienes algunas áreas 
 
 ## Créditos
 
-Este juego fue creado por [Giancarlos Arom Olihua Guerra](gianaromog_03@hotmail.com). Siéntete libre de contactarme si tienes alguna pregunta o sugerencia.
+Este juego fue creado por [Giancarlos Arom Olihua Guerra](https://github.com/Jankarurosu). Siéntete libre de contactarme si tienes alguna pregunta o sugerencia.
 
 ¡Diviértete jugando al Juego del Número Secreto! 🎮
