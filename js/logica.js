@@ -18,9 +18,12 @@ function limpiar() {
 
 //Función para verificar si el usuario acerto el numero secreto
 function intentoUsuario() {
+    let numeroUsuarioInput = document.getElementById('numeroUsuario').value.trim();
     let numeroUsuario = parseInt(document.getElementById('numeroUsuario').value);
 
-    if (numeroUsuario == numeroSecreto) {
+    if (numeroUsuarioInput === "") {
+        cambiarTexto('texto__alterado', '¡Debes ingresar un número!');
+    } else if (numeroUsuario == numeroSecreto) {
         cambiarTexto('texto__alterado', '¡Acertaste! El número secreto era ' + numeroSecreto + ' lo hiciste en ' + intentos + (intentos === 1 ? ' intento. ' : ' intentos. '));
         console.log('Se adivino el numero secreto en ' + intentos + (intentos === 1 ? ' intento. ' : ' intentos. '));
         document.getElementById('jugar').setAttribute('disabled', 'true');
@@ -44,6 +47,13 @@ function intentoUsuario() {
 
 //Al presionar el boton jugar se ejecuta la funcion intentoUsuario
 document.getElementById('jugar').onclick = intentoUsuario;
+
+//Al ingresar un número y presionar la tecla Enter llamamos a la función intentoUsuario
+document.getElementById('numeroUsuario').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        intentoUsuario();
+    }
+});
 
 //Funcion para generar el numero secreto automaticamente
 function generarNumeroAleatorio() {
